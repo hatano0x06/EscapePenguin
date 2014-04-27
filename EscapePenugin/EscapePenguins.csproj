@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D1F85DC3-A4F1-4279-8303-D939E4580B85}</ProjectGuid>
+    <ProjectTypeGuids>{69878862-DA7D-4DC6-B0A1-50D8FAB4242F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>EscapePenguins</RootNamespace>
+    <AssemblyName>EscapePenguins</AssemblyName>
+    <ReleaseVersion>0.2</ReleaseVersion>
+    <Description>マルチプレイパズル</Description>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug(sce)|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Sce.PlayStation.Core" />
+    <Reference Include="System" />
+    <Reference Include="Sce.PlayStation.HighLevel.Model" />
+    <Reference Include="Sce.PlayStation.HighLevel.GameEngine2D" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Sce\Sce.Psm.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="ObjPlaceData.cs" />
+    <Compile Include="MenuCtrl.cs" />
+    <Compile Include="EscapePenguins.cs" />
+    <Compile Include="rotateBlock.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="resources\clear_story_back.png" />
+    <Content Include="resources\game_clear_back.png" />
+    <Content Include="resources\stage_select_back.png" />
+    <Content Include="resources\stage_select_button0.png" />
+    <Content Include="resources\stage_select_button1.png" />
+    <Content Include="resources\stage_select_button2.png" />
+    <Content Include="resources\stage_select_button3.png" />
+    <Content Include="resources\stage_select_button4.png" />
+    <Content Include="resources\stage_select_button5.png" />
+    <Content Include="resources\stage_select_button6.png" />
+    <Content Include="resources\stage_select_button7.png" />
+    <Content Include="resources\stage_select_button8.png" />
+    <Content Include="resources\stage_select_return.png" />
+    <Content Include="resources\story_back.png" />
+    <Content Include="resources\title_back.png" />
+    <Content Include="resources\title_credit.png" />
+    <Content Include="resources\title_start.png" />
+    <Content Include="resources\credit_back.png" />
+    <Content Include="mdx\agni.mdx" />
+    <Content Include="mdx\box.mdx" />
+    <Content Include="mdx\floor.mdx" />
+    <Content Include="mdx\kura.mdx" />
+    <Content Include="mdx\pen.mdx" />
+    <Content Include="mdx\player_happy.mdx" />
+    <Content Include="mdx\player_idle.mdx" />
+    <Content Include="mdx\player_move.mdx" />
+    <Content Include="mdx\player2.mdx" />
+    <Content Include="mdx\player2_happy.mdx" />
+    <Content Include="mdx\player2_move.mdx" />
+    <Content Include="mdx\switch.mdx" />
+    <Content Include="mdx\test.mdx" />
+    <Content Include="mdx\walker.mdx" />
+    <Content Include="mdx\wall.mdx" />
+    <Content Include="sound\clear.wav" />
+    <Content Include="sound\GameBgm.wav" />
+    <Content Include="sound\hitbody.wav" />
+    <Content Include="sound\hitwall.wav" />
+    <Content Include="sound\select.wav" />
+    <Content Include="sound\slide.wav" />
+    <Content Include="sound\switch.wav" />
+    <Content Include="resources\stage_select_button9.png" />
+    <Content Include="resources\stage_select_button10.png" />
+    <Content Include="resources\stage_select_button11.png" />
+    <Content Include="resources\stage_select_button12.png" />
+    <Content Include="resources\stage_select_button13.png" />
+    <Content Include="resources\stage_select_button14.png" />
+    <Content Include="resources\stage_select_button15.png" />
+    <Content Include="resources\stage_select_button16.png" />
+    <Content Include="resources\stage_select_button17.png" />
+    <Content Include="resources\stage_select_button18.png" />
+    <Content Include="resources\stage_select_button19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PsmMetadata Include="app.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="mdx\" />
+    <Folder Include="sound\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SampleLib\SampleLib.csproj">
+      <Project>{DA12989D-8B5F-4844-A97A-278F6397CE1D}</Project>
+      <Name>SampleLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
